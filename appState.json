@@ -8,7 +8,8 @@
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "cdb4fc11-414d-4658-a410-d5a1ca65f8b2"
+          "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
+          "699f950b-fad7-4c89-9a2b-d14232d06cad"
         ],
         "isRemovable": false,
         "filePath": "GitCommitRegression"
@@ -32,14 +33,46 @@
         },
         "triggers": [],
         "testCases": {}
+      },
+      "699f950b-fad7-4c89-9a2b-d14232d06cad": {
+        "id": "699f950b-fad7-4c89-9a2b-d14232d06cad",
+        "parent": "073a920b-255c-41cb-a113-6804f55c8d86",
+        "name": "Newsub1",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "63c15948-c22e-44b5-856f-46f215aa4fc5"
+        ],
+        "isRemovable": true,
+        "filePath": "GitCommitRegression/Newsub1"
+      },
+      "63c15948-c22e-44b5-856f-46f215aa4fc5": {
+        "id": "63c15948-c22e-44b5-856f-46f215aa4fc5",
+        "parent": "699f950b-fad7-4c89-9a2b-d14232d06cad",
+        "name": "lambda2.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "GitCommitRegression/Newsub1/lambda2.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
       }
     },
     "deletedFiles": [],
     "rootNode": "073a920b-255c-41cb-a113-6804f55c8d86",
     "openFiles": [
-      "cdb4fc11-414d-4658-a410-d5a1ca65f8b2"
+      "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
+      "63c15948-c22e-44b5-856f-46f215aa4fc5"
     ],
-    "currentFileId": "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
+    "currentFileId": "63c15948-c22e-44b5-856f-46f215aa4fc5",
     "resources": {
       "sqsKTestSQS": {
         "name": "sqsKTestSQS",
@@ -103,7 +136,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566280233242
+    "lastSave": 1566280325263
   },
   "VCS_STATE": {
     "provider": "GitHub",
