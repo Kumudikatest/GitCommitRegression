@@ -30,12 +30,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1TestAPIMyLambdaput",
-            "config": {}
-          }
-        ],
+        "triggers": [],
         "testCases": {}
       }
     },
@@ -74,10 +69,10 @@
           "resourceId": "98nqbj",
           "restMethod": "PUT",
           "proxyIntegration": false,
-          "enableCORS": false,
+          "enableCORS": true,
           "stageMode": 1,
-          "stageName": "Test",
-          "stageDeploymentId": "v6elry",
+          "stageName": "prod",
+          "stageDeploymentId": "u3behr",
           "mode": 1
         }
       }
@@ -115,7 +110,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566277383335
+    "lastSave": 1566279711021
   },
   "VCS_STATE": {
     "provider": "GitHub",
