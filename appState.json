@@ -40,43 +40,7 @@
       "cdb4fc11-414d-4658-a410-d5a1ca65f8b2"
     ],
     "currentFileId": "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
-    "resources": {
-      "apigusEast1TestAPIMyLambdaput": {
-        "name": "apigusEast1TestAPIMyLambdaput",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "TestAPI",
-          "apiId": "0itznun7w3",
-          "endpointType": "EDGE",
-          "rootResourceId": "h2lelj6j7k",
-          "existingResources": {
-            "/test": "1aztfv",
-            "/test/janaka": "3zhfku",
-            "/MyLambda": "98nqbj",
-            "/test/foo": "alrh6s",
-            "/": "h2lelj6j7k",
-            "/newchange/test": "k6pdhn",
-            "/newchange": "q1ox7l",
-            "/testWithSlash": "q4m4g1",
-            "/testtwospeciallambda": "q4szm3",
-            "/testtwospecialkumutest": "wey3lk"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/MyLambda",
-          "resourceName": "MyLambda",
-          "resourceId": "98nqbj",
-          "restMethod": "PUT",
-          "proxyIntegration": false,
-          "enableCORS": true,
-          "stageMode": 1,
-          "stageName": "prod",
-          "stageDeploymentId": "u3behr",
-          "mode": 1
-        }
-      }
-    },
+    "resources": {},
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -110,7 +74,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566279711021
+    "lastSave": 1566279939651
   },
   "VCS_STATE": {
     "provider": "GitHub",
