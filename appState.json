@@ -25,7 +25,7 @@
         "filePath": "GitCommitRegression/lambda.js",
         "code": "let AWS = require('aws-sdk');\nlet SL_AWS = require('slappforge-sdk-aws');\nconst sqs = new SL_AWS.SQS(AWS);\n\nexports.handler = function (event, context, callback) {\n    sqs.receiveMessage({\n        QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/KTestSQS`,\n        AttributeNames: ['All'],\n        MaxNumberOfMessages: '1',\n        VisibilityTimeout: '30',\n        WaitTimeSeconds: '0'\n    }).promise()\n        .then(receivedMsgData => {\n            if (!!(receivedMsgData) && !!(receivedMsgData.Messages)) {\n                let receivedMessages = receivedMsgData.Messages;\n                receivedMessages.forEach(message => {\n                    // your logic to access each message through out the loop. Each message is available under variable message \n                    // within this block\n                });\n            } else {\n                // No messages to process\n            }\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs10.x",
           "handler": "handler",
           "timeout": 60,
           "memory": 128,
@@ -72,7 +72,7 @@
       "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
       "63c15948-c22e-44b5-856f-46f215aa4fc5"
     ],
-    "currentFileId": "63c15948-c22e-44b5-856f-46f215aa4fc5",
+    "currentFileId": "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
     "resources": {
       "sqsKTestSQS": {
         "name": "sqsKTestSQS",
@@ -136,7 +136,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566280325263
+    "lastSave": 1566280642952
   },
   "VCS_STATE": {
     "provider": "GitHub",
