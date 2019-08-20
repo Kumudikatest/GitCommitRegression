@@ -75,9 +75,7 @@
         "triggers": []
       }
     },
-    "deletedFiles": [
-      "GitCommitRegression/Newsub1/js file.js"
-    ],
+    "deletedFiles": [],
     "rootNode": "073a920b-255c-41cb-a113-6804f55c8d86",
     "openFiles": [
       "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
@@ -119,6 +117,14 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -147,7 +153,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566289588761
+    "lastSave": 1566290169675
   },
   "VCS_STATE": {
     "provider": "GitHub",
