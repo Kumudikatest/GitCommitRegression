@@ -9,7 +9,8 @@
         "isDirectory": true,
         "children": [
           "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
-          "699f950b-fad7-4c89-9a2b-d14232d06cad"
+          "699f950b-fad7-4c89-9a2b-d14232d06cad",
+          "8a07fc1d-cd86-42fe-b04b-fa308b770852"
         ],
         "isRemovable": false,
         "filePath": "GitCommitRegression"
@@ -61,18 +62,39 @@
           "handler": "handler",
           "timeout": 60,
           "memory": 128,
-          "layers": []
+          "layers": [
+            "arn:aws:lambda:us-east-2:123456789012:layer:my-layer:3"
+          ],
+          "vpc": "vpc-ee1ef195",
+          "subNets": [
+            "subnet-993076a6"
+          ],
+          "secGroups": [
+            "sg-00c0e38b3ca019399"
+          ]
         },
         "triggers": []
+      },
+      "8a07fc1d-cd86-42fe-b04b-fa308b770852": {
+        "id": "8a07fc1d-cd86-42fe-b04b-fa308b770852",
+        "parent": "073a920b-255c-41cb-a113-6804f55c8d86",
+        "name": "js file.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "GitCommitRegression/js file.js",
+        "code": "<script>\r\n</script>"
       }
     },
     "deletedFiles": [],
     "rootNode": "073a920b-255c-41cb-a113-6804f55c8d86",
     "openFiles": [
       "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
-      "63c15948-c22e-44b5-856f-46f215aa4fc5"
+      "63c15948-c22e-44b5-856f-46f215aa4fc5",
+      "8a07fc1d-cd86-42fe-b04b-fa308b770852"
     ],
-    "currentFileId": "cdb4fc11-414d-4658-a410-d5a1ca65f8b2",
+    "currentFileId": "8a07fc1d-cd86-42fe-b04b-fa308b770852",
     "resources": {
       "sqsKTestSQS": {
         "name": "sqsKTestSQS",
@@ -136,7 +158,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566280642952
+    "lastSave": 1566281154279
   },
   "VCS_STATE": {
     "provider": "GitHub",
