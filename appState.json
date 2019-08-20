@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "GitCommitRegression/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_uVXTQInep\",\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here\n            throw error;\n        }\n        // your logic goes within this block\n    });\n    //Test\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n    \n    //Test\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -345,7 +345,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566276178840
+    "lastSave": 1566276233513
   },
   "VCS_STATE": {
     "provider": "GitHub",
