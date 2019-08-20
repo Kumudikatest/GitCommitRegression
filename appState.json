@@ -117,6 +117,14 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Kumu",
+        "varValue": "123",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -145,7 +153,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566291283547
+    "lastSave": 1566291367110
   },
   "VCS_STATE": {
     "provider": "GitHub",
