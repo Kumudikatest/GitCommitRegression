@@ -18,6 +18,7 @@ exports.handler = function (event, context, callback) {
                     // within this block
                 });
             } else {
+                //
                 // No messages to process
             }
         })
