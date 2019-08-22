@@ -123,7 +123,6 @@
         }
       }
     },
-    ,
       "undefined": {
         "type": "email"
       },
