@@ -162,9 +162,6 @@
           "notRemovable": false
         }
       }
-    },
-    "undefined": {
-      "type": "email"
     }
   },
   "PROJECT_META": {
