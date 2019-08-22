@@ -23,7 +23,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "GitCommitRegression/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst ses = new AWS.SES();\nlet SL_AWS = require('slappforge-sdk-aws');\nconst sqs = new SL_AWS.SQS(AWS);\n\nexports.handler = function (event, context, callback) {\n    sqs.receiveMessage({\n        QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/KTestSQS`,\n        AttributeNames: ['All'],\n        MaxNumberOfMessages: '1',\n        VisibilityTimeout: '30',\n        WaitTimeSeconds: '0'\n    }).promise()\n        .then(receivedMsgData => {\n            if (!!(receivedMsgData) && !!(receivedMsgData.Messages)) {\n                let receivedMessages = receivedMsgData.Messages;\n                receivedMessages.forEach(message => {\n                    // your logic to access each message through out the loop. Each message is available under variable message \n                    // within this block\n                });\n            } else {\n                //\n                // No messages to process\n            }\n        })\n        .catch(err => {\n            // error handling goes here\n            ses.sendEmail({\n                Destination: {\n                    ToAddresses: ['kumudika+@adroitlogic.com'],\n                    CcAddresses: [],\n                    BccAddresses: []\n                },\n                Message: {\n                    Body: {\n                        Text: {\n                            Data: `Test`\n                        }\n                    },\n                    Subject: {\n                        Data: 'Test'\n                    }\n                },\n                Source: 'kumudika@adroitlogic.com',\n            }, function (err, data) {\n                if (err) console.log(err, err.stack); // an error occurred\n                else console.log(data);           // successful response\n            });\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst ses = new AWS.SES();\nlet SL_AWS = require('slappforge-sdk-aws');\nconst sqs = new SL_AWS.SQS(AWS);\n\nexports.handler = function (event, context, callback) {\n    sqs.receiveMessage({\n        QueueUrl: `https://sqs.${process.env.AWS_REGION}.amazonaws.com/${process.env.SIGMA_AWS_ACC_ID}/KTestSQS`,\n        AttributeNames: ['All'],\n        MaxNumberOfMessages: '1',\n        VisibilityTimeout: '30',\n        WaitTimeSeconds: '0'\n    }).promise()\n        .then(receivedMsgData => {\n            if (!!(receivedMsgData) && !!(receivedMsgData.Messages)) {\n                let receivedMessages = receivedMsgData.Messages;\n                receivedMessages.forEach(message => {\n                    // your logic to access each message through out the loop. Each message is available under variable message \n                    // within this block//\n                });\n            } else {\n                //\n                // No messages to process\n            }\n        })\n        .catch(err => {\n            // error handling goes here\n            ses.sendEmail({\n                Destination: {\n                    ToAddresses: ['kumudika+@adroitlogic.com'],\n                    CcAddresses: [],\n                    BccAddresses: []\n                },\n                Message: {\n                    Body: {\n                        Text: {\n                            Data: `Test`\n                        }\n                    },\n                    Subject: {\n                        Data: 'Test'\n                    }\n                },\n                Source: 'kumudika@adroitlogic.com',\n            }, function (err, data) {\n                if (err) console.log(err, err.stack); // an error occurred\n                else console.log(data);           // successful response\n            });\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs10.x",
           "handler": "handler",
@@ -123,9 +123,6 @@
         }
       }
     },
-      "undefined": {
-        "type": "email"
-      },
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -174,7 +171,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1566444509989
+    "lastSave": 1566444675371
   },
   "VCS_STATE": {
     "provider": "GitHub",
